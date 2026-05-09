@@ -1,0 +1,456 @@
+.dashboard {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px;
+  animation: fadeIn 0.5s ease;
+  font-family: "Sora", sans-serif;
+  color: #1a1d2e;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1d2e;
+  margin-bottom: 4px;
+}
+
+.header p {
+  font-size: 13px;
+  color: #8892a4;
+}
+
+.dateBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e8eaf0;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1d2e;
+  box-shadow: 0 2px 16px rgba(59, 91, 219, 0.07);
+}
+
+.dateBadge svg {
+  color: #3b5bdb;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.statsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 2px 16px rgba(59, 91, 219, 0.07);
+  border: 1px solid #e8eaf0;
+}
+
+.statCard {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.statNum {
+  font-size: 42px;
+  font-weight: 700;
+  font-family: "DM Mono", monospace;
+  color: #1a1d2e;
+  line-height: 1;
+  animation: countUp 0.8s ease;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.statIcon {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  font-size: 28px;
+  opacity: 0.15;
+}
+
+/* Chart card */
+.chartCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.chartCard h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.chartInner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.chartWrap {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legendPct {
+  font-family: "DM Mono", monospace;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.legendLabel {
+  font-size: 11px;
+  color: #8892a4;
+  margin-top: 1px;
+}
+
+.viewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3b5bdb;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  transition: gap 0.2s;
+}
+
+.viewLink:hover {
+  gap: 10px;
+}
+
+.interviewsCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.interviewNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.interviewDate {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navBtns {
+  display: flex;
+  gap: 6px;
+}
+
+.navBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid #e8eaf0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #8892a4;
+  transition: all 0.15s;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeSlot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+}
+
+.timeLabel {
+  font-size: 12px;
+  color: #8892a4;
+  font-family: "DM Mono", monospace;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.timeLine {
+  flex: 1;
+  height: 1px;
+  background: #e8eaf0;
+}
+
+.interviewSlot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  background: #eef2ff;
+  border: 1px solid rgba(59, 91, 219, 0.15);
+  border-radius: 12px;
+  padding: 10px 14px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.interviewName {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.interviewRole {
+  font-size: 11px;
+  color: #8892a4;
+  margin-top: 1px;
+}
+
+/* History */
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.historyHeader h2 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.appList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appItem {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #e8eaf0;
+  box-shadow: 0 2px 16px rgba(59, 91, 219, 0.07);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+  animation: fadeInApp 0.4s ease both;
+}
+
+@keyframes fadeInApp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(59, 91, 219, 0.1);
+}
+
+.appLogo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.appInfo {
+  flex: 1;
+}
+
+.appTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.appMeta {
+  font-size: 12px;
+  color: #8892a4;
+}
+
+.appDateCol {
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 90px;
+}
+
+.appDateLabel {
+  font-size: 11px;
+  color: #8892a4;
+  margin-bottom: 2px;
+}
+
+.appDateVal {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "DM Mono", monospace;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1.5px solid;
+  white-space: nowrap;
+}
+
+.badgeReview {
+  color: #f59f00;
+  border-color: #f59f00;
+  background: #fff9db;
+}
+
+.badgeShortlisted {
+  color: #37b24d;
+  border-color: #37b24d;
+  background: #ebfbee;
+}
+
+.badgeDeclined {
+  color: #f03e3e;
+  border-color: #f03e3e;
+  background: #fff5f5;
+}
+
+.moreBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  color: #8892a4;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.moreBtn:hover {
+  background: #f0f2f8;
+}
+
+.bottomLink {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+}

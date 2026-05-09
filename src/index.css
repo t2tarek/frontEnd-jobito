@@ -1,0 +1,207 @@
+/* ─── Theme Variables ─────────────────────────── */
+:root {
+  /* ─── Light Theme (Default) ─── */
+  --color-primary: #4A6ED1;          /* Cobalt Bloom */
+  --color-primary-hover: #3B5BB8;
+  --color-primary-light: #E8EDF8;
+  --color-primary-bg: #D6DFEF;
+  --color-accent: #FF7A2A;           /* Tangerine Petal */
+  --color-accent-hover: #E56A1F;
+  --color-accent-light: #FFF0E6;
+  --color-muted: #B59A90;            /* Dusty Taupe */
+  --color-text: #26292D;             
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #7c8493;
+  --color-bg: #FAFBF6;
+  --color-bg-secondary: #F7F8FC;
+  --color-bg-tertiary: #f8f9fb;
+  --color-header-bg: #fff;
+  --color-footer-bg: #0B1020;       
+  --color-footer-text: #c9d1d9;
+  --color-border: #D6DDEB;
+  --color-border-light: #e9ebf0;
+  --color-card-bg: #ffffff;
+  --color-card-hover: #f4f5f7;
+  --color-input-bg: #ffffff;
+  --color-input-focus-shadow: rgba(74, 110, 209, 0.15);
+  --gradient-primary: linear-gradient(135deg, #4A6ED1, #FF7A2A);
+  --navy: #0B1020;
+  --shadow-sm: 0 1px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* ─── Dark Theme ─── */
+  --color-primary: #6B8CE0;          /* Cobalt lighter */
+  --color-primary-hover: #8AA3E8;
+  --color-primary-light: #1A2340;
+  --color-primary-bg: #162035;
+  --color-accent: #FF9A55;           /* Tangerine softer */
+  --color-accent-hover: #FFB07A;
+  --color-accent-light: #2A1A10;
+  --color-muted: #C4ADA5;            /* Taupe lighter */
+  --color-text: #E2E8F0;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748b;
+  --color-bg: #0B1020;               /* Midnight Navy */
+  --color-bg-secondary: #111827;
+  --color-bg-tertiary: #0f1629;
+  --color-header-bg: #141B2D;
+  --color-footer-bg: #080C18;
+  --color-footer-text: #94A3B8;
+  --color-border: #1E2A45;
+  --color-border-light: #1a2338;
+  --color-card-bg: #141B2D;
+  --color-card-hover: #1a2540;
+  --color-input-bg: #090e1a; /* Darker input background */
+  --color-input-focus-shadow: rgba(107, 140, 224, 0.2);
+  --gradient-primary: linear-gradient(135deg, #6B8CE0, #FF9A55);
+  --navy: #8AA3E8;
+  --shadow-sm: 0 1px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Global Theme Transition ──────────────── */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ─── Reset ───────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* App container */
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Layout */
+.main-layout {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Links */
+a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Form elements */
+button,
+input {
+  outline: none;
+  border: none;
+  font-family: inherit;
+}
+
+input,
+select,
+textarea {
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+  font-family: inherit;
+  border: 1px solid var(--color-border);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"] {
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: var(--color-input-bg) !important;
+  color: var(--color-text) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Autofill fixes for Dark Mode */
+[data-theme="dark"] input:-webkit-autofill,
+[data-theme="dark"] input:-webkit-autofill:hover, 
+[data-theme="dark"] input:-webkit-autofill:focus, 
+[data-theme="dark"] input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-input-bg) inset !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+}
+
+/* For inputs that should be transparent (like search bars) */
+input.transparent,
+.transparent input,
+.transparent select {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  background-image: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}

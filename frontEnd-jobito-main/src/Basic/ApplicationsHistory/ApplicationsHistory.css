@@ -1,0 +1,320 @@
+.ah-page {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Syne", sans-serif;
+  margin: 0;
+}
+
+/* Header Section */
+.ah-header-section {
+  padding: 32px;
+}
+
+.ah-header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ah-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.ah-subtitle {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.ah-date-btn {
+  display: flex;
+  align-items: center;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  background-color: transparent;
+  border-color: rgba(32, 36, 48, 0.1);
+}
+
+.ah-date-btn:hover {
+  background-color: rgba(32, 36, 48, 0.05);
+}
+
+/* Main Content */
+.ah-main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* Banner */
+.ah-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.ah-banner-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ah-banner-icon {
+  flex-shrink: 0;
+}
+
+.ah-banner-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary); /* blue */
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+.ah-banner-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.ah-banner-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Tabs */
+.ah-tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 32px;
+}
+
+.ah-tab {
+  background: none;
+  border: none;
+  padding: 0 0 16px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  position: relative;
+}
+
+.ah-tab.active {
+  color: var(--color-text);
+}
+
+.ah-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 3px 3px 0 0;
+}
+
+/* Table Area */
+.ah-table-container {
+  margin-bottom: 48px;
+}
+
+.ah-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ah-table-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.ah-table-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.ah-action-btn {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.ah-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ah-table th {
+  text-align: left;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ah-table td {
+  padding: 24px 16px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.ah-company-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ah-company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.ah-company-name {
+  font-weight: 600;
+}
+
+.ah-role {
+  color: var(--color-text-secondary);
+}
+
+.ah-date {
+  color: var(--color-text-secondary);
+}
+
+.ah-status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-in-review {
+  color: #ffb836;
+  border: 1px solid #ffb836;
+}
+
+.status-shortlisted {
+  color: #56cdad;
+  border: 1px solid #56cdad;
+}
+
+.status-offered {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.status-interviewing {
+  color: #ff9b26;
+  border: 1px solid #ff9b26;
+}
+
+.status-unsuitable {
+  color: #ff4a3d;
+  border: 1px solid #ff4a3d;
+}
+
+.ah-more-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Pagination */
+.ah-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.ah-page-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ah-page-btn.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.ah-page-btn:hover:not(.active) {
+  background-color: var(--color-bg-secondary);
+}
+
+.ah-nav-btn {
+  color: var(--color-text);
+}
+
+.ah-page-dots {
+  color: var(--color-text-muted);
+}

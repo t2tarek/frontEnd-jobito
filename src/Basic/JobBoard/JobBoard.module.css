@@ -1,0 +1,190 @@
+.page {
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.heroSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 0;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 40px;
+}
+
+.title {
+  font-size: 52px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.purpleText {
+  color: var(--color-primary);
+}
+
+.blueText {
+  color: var(--color-accent);
+  position: relative;
+  display: inline-block;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: var(--shadow-md);
+  max-width: 850px;
+  border: 1px solid var(--color-border-light);
+  background-color: var(--color-input-bg);
+  border-radius: 12px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 15px;
+}
+
+.icon {
+  color: var(--color-text);
+  margin-right: 10px;
+}
+
+.inputGroup input {
+  border: none !important;
+  outline: none !important;
+  width: 100%;
+  font-size: 16px;
+  color: var(--color-text) !important;
+  background-color: var(--color-input-bg) !important;
+  padding: 10px 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.inputGroup select {
+  border: none !important;
+  outline: none !important;
+  width: 100%;
+  font-size: 16px;
+  color: var(--color-text) !important;
+  background-color: var(--color-input-bg) !important;
+  padding: 10px 0;
+  appearance: none;
+}
+
+.inputGroup input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.inputGroup select option {
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-border);
+}
+
+.searchBtn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.searchBtn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.popular {
+  margin-top: 20px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.popular strong {
+  color: var(--color-text);
+}
+
+.companiesSection {
+  width: 100%;
+  padding: 40px 0;
+  background-color: var(--color-bg);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.leadText {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.logoGrid {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-accent);
+  justify-content: 间-between;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 30px;
+  opacity: 0.6;
+}
+
+.logo {
+  height: 35px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logoGrid {
+    justify-content: center;
+  }
+}
+
+.cardJobBoard {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}

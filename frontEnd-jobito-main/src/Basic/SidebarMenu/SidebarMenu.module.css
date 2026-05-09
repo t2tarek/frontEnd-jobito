@@ -1,0 +1,132 @@
+.sidebarWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1100;
+}
+
+/* Hamburger Styles */
+.hamburger {
+  cursor: pointer;
+  display: block;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: var(--color-text);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lineTopBottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .lineTopBottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* Menu Styles */
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: var(--color-card-bg);
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.inputOpen {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.value {
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: var(--color-text);
+  display: flex;
+  position: relative;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  outline: none;
+}
+
+.value:not(:active):hover,
+.value:focus {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-primary);
+}
+
+.value:focus,
+.value:active {
+  background-color: var(--color-bg-secondary);
+  outline: none;
+  padding-left: 20px;
+}
+
+.value::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  width: 4px;
+  height: 80%;
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.value:focus::before,
+.value:active::before {
+  opacity: 1;
+}
+
+.value svg {
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.input:hover > :not(.value:hover) {
+  transition: 300ms;
+  filter: blur(1.5px);
+  transform: scale(0.95, 0.95);
+}

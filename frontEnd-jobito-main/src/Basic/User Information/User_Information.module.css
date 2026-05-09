@@ -1,0 +1,40 @@
+.page {
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.signInBtn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  padding: 10px 24px;
+  background: #3c65f5;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(60, 101, 245, 0.2);
+}
+
+.signInBtn:hover {
+  background: #2f4ac7;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(60, 101, 245, 0.3);
+}

@@ -1,0 +1,737 @@
+.pageContainer {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  padding-bottom: 80px;
+}
+
+.contentWrapper {
+  max-width: 100%;
+  margin: 0;
+  padding: 32px 40px;
+  background-color: var(--color-card-bg);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+.activeBreadcrumb {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Tab Navigation */
+.tabNav {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 40px;
+  padding-bottom: 1px;
+}
+
+.tabItem {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Epilogue", sans-serif;
+  margin-bottom: -1px;
+}
+
+.tabItem:hover {
+  color: var(--color-primary);
+}
+
+.activeTab {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.applicantsContainer {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Language Toggle */
+.langToggle {
+  display: flex;
+  background: var(--color-bg-secondary);
+  padding: 4px;
+  border-radius: 8px;
+  gap: 4px;
+}
+
+.langBtn {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #515b6f;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.langBtn:hover {
+  color: var(--color-text);
+}
+
+.activeLang {
+  background: var(--color-card-bg);
+  color: var(--color-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Card */
+.headerCard {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.companyLogo {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyLogo span {
+  color: white;
+  font-family: "Epilogue", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.headerTitles h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px 0;
+}
+
+.headerTitles p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shareBtn {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.shareBtn:hover {
+  background: #f4f5f7;
+}
+
+.applyBtn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Epilogue", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.applyBtn:hover {
+  background: #3b36b5;
+}
+
+.editBtn {
+  background: var(--color-card-bg);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editBtn:hover {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+}
+
+.deleteBtn {
+  background: white;
+  color: #ff4d4f;
+  border: 1px solid #d6ddeb;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #fff1f0;
+  border-color: #ff4d4f;
+}
+
+.closeBtn {
+  background: white;
+  color: #ff4d4f;
+  border: 1px solid #d6ddeb;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.closeBtn:hover {
+  background: #fff1f0;
+  border-color: #ff4d4f;
+}
+
+.reopenBtn {
+  background: white;
+  color: #56cdad;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reopenBtn:hover {
+  background: #f6ffed;
+  border-color: #56cdad;
+}
+
+.closedBtn {
+  background: #f4f5f7;
+  color: #a0aabf;
+  border: 1px solid #d6ddeb;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Epilogue", sans-serif;
+  cursor: not-allowed;
+  transition: all 0.2s;
+}
+
+/* Main Layout */
+.mainLayout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section h2 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 16px 0;
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #515b6f;
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #515b6f;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Right Column */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.widget h2 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 24px 0;
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 8px 0;
+}
+
+.capacityBox {
+  margin-bottom: 24px;
+}
+
+.capacityText {
+  font-size: 14px;
+  color: #515b6f;
+  margin-bottom: 8px;
+}
+
+.boldText {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.progressBar {
+  height: 6px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 50%;
+  height: 100%;
+  background-color: #56cdad;
+  border-radius: 99px;
+}
+
+.roleDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roleRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.roleLabel {
+  color: #515b6f;
+}
+
+.roleValue {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.expiresAtValue {
+  color: #FF6550;
+  font-weight: 600;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tagYellow {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tagGreen {
+  background: #eafcf5;
+  color: #56cdad;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tagOutlineBlue {
+  background: var(--color-bg-secondary);
+  color: var(--color-primary);
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.noSkillsText {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* Perks & Benefits */
+.perksSection {
+  margin-bottom: 64px;
+}
+
+.perksHeader {
+  margin-bottom: 32px;
+}
+
+.perksHeader h2 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px 0;
+}
+
+.perksHeader p {
+  font-size: 16px;
+  color: #515b6f;
+  margin: 0;
+}
+
+.perksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 24px;
+}
+
+.perkCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.perkIcon {
+  margin-bottom: 20px;
+}
+
+.perkCard h3 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 12px 0;
+}
+
+.perkCard p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #515b6f;
+  margin: 0;
+}
+
+/* About Company */
+.aboutCompanySection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.companyHeader {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.companyLogoBig {
+  width: 64px;
+  height: 64px;
+  background-color: #5c4ee5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyLogoBig span {
+  color: white;
+  font-family: "Epilogue", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.companyTitles h2 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px 0;
+}
+
+.companyLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.companyLink:hover {
+  text-decoration: underline;
+}
+
+.companyLeft p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #515b6f;
+  margin: 0;
+}
+
+.companyRight {
+  display: flex;
+  gap: 16px;
+}
+
+.companyImgMain {
+  width: 60%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.companyImgCol {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.companyImgSub {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Similar Jobs */
+.similarJobsSection {
+  border-top: 1px solid #d6ddeb;
+  padding-top: 64px;
+}
+
+.similarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.similarHeader h2 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.similarGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.similarJobCard {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.similarJobCard:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-color: #c0c8da;
+}
+
+.simLogo {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Epilogue", sans-serif;
+}
+
+.simDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.simTitleGroup h3 {
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px 0;
+}
+
+.simTitleGroup p {
+  font-size: 14px;
+  color: #515b6f;
+  margin: 0 0 16px 0;
+}
+
+.simTags {
+  display: flex;
+  gap: 8px;
+}
+
+.tagYellowOutline {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-card-bg);
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tagBlueOutline {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background: white;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.appliedStatusContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.appliedBtn {
+  background-color: #eef2ff;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: not-allowed;
+  width: 100%;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid;
+}
+
+.status-applied, .status-reviewing {
+  background-color: #fffbeb;
+  color: #d97706;
+  border-color: #fcd34d;
+}
+
+.status-shortlisted, .status-interviewed, .status-hired {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border-color: #bbf7d0;
+}
+
+.status-declined {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}

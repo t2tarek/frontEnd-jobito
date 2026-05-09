@@ -1,0 +1,107 @@
+.rootUser {
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  background-color: var(--color-header-bg);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  height: 62px;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.rootcompany {
+  display: flex;
+  box-shadow: var(--shadow-sm);
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--color-border);
+  top: 0;
+  position: sticky;
+  justify-content: space-between;
+  height: 62px;
+  background-color: var(--color-header-bg);
+  z-index: 1000;
+}
+
+.downloadBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-primary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.downloadBtn i {
+  font-size: 14px;
+}
+
+.downloadBtn:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #578dc9;
+  /* Blue color matching the image */
+
+  border: none;
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.langBtn:hover {
+  background-color: #4676ae;
+  transform: scale(1.05);
+}
+
+.langBtn span {
+  font-family: inherit;
+  line-height: 1;
+}
+
+/* Theme Toggle — Simple Icon */
+.themeToggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  background-color: #1a2c42;
+  /* Dark blue/slate background */
+
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.themeToggleBtn:hover {
+  transform: scale(1.05);
+  background-color: #142233;
+}
+

@@ -1,0 +1,273 @@
+.container {
+  padding: 40px;
+  min-height: 100vh;
+  font-family: "Syne", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.container.dark {
+  background-color: #000c18;
+  color: #f8fafc;
+}
+
+.container.light {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  padding-bottom: 20px;
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.titleArea h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.meta {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.tabs {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.tab {
+  color: #94a3b8;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: 12px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.activeTab {
+  color: #7c3aed;
+  border-bottom-color: #7c3aed;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 20px;
+}
+
+.listHeader h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.searchBox {
+  display: flex;
+  gap: 12px;
+}
+
+.searchBar {
+  border-radius: 8px;
+  padding: 10px 16px;
+  width: 280px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.dark .searchBar {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.light .searchBar {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.filterBtn {
+  background: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .filterBtn {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.light .filterBtn {
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+}
+
+.tableContainer {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dark .tableContainer {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.light .tableContainer {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 18px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dark .table th {
+  background: rgba(255, 255, 255, 0.03);
+  color: #94a3b8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light .table th {
+  background: #f8fafc;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+  padding: 20px 24px;
+  vertical-align: middle;
+}
+
+.dark .table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.light .table td {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.applicantInfo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.phone, .location {
+  font-size: 14px;
+}
+
+.dark .phone, .dark .location {
+  color: #cbd5e1;
+}
+
+.light .phone, .light .location {
+  color: #475569;
+}
+
+.actionBtn {
+  background: transparent;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .actionBtn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.light .actionBtn {
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+}
+
+.actionBtn:hover {
+  background: #7c3aed;
+  color: white;
+  border-color: #7c3aed;
+}
+
+.approvedBtn {
+  color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+.approvedBtn:hover {
+  background: #10b981 !important;
+  color: white !important;
+}
+
+.rejectedBtn {
+  color: #ef4444 !important;
+  border-color: #ef4444 !important;
+}
+
+.rejectedBtn:hover {
+  background: #ef4444 !important;
+  color: white !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.pageBtn {
+  background: #7c3aed;
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.pageBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
